@@ -14,7 +14,7 @@ class linkedList{
 
     insertAtFirst(data){
         this.head = new Node(data,this.head);    
-        this.size++;
+
     }
 
     insertAtLast(data){
@@ -30,7 +30,7 @@ class linkedList{
                 }
                 current.next = node;
         }
-        this.size++;
+
     }
 
     insertAt(data,index){
@@ -57,7 +57,7 @@ class linkedList{
         }
         node.next = current;
         previous.next = node;
-        this.size++;
+
 
 
     }
@@ -124,11 +124,13 @@ class linkedList{
     }
 
     printListData(){
-        let current = this.head;        
+        let current = this.head;   
+        let array = []     
         while(current){
-            console.log(current.data);
+            array.push(current.data);
             current = current.next;
         }
+        console.log(array.join(' -> '));
     }
 
     insertBefore(data,index){
