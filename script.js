@@ -168,7 +168,6 @@ class linkedList{
         let current = this.head;
         if(current.data == data){
             this.head = current.next;
-            return;
         }
         let previous;
         while(current.next!=null){
@@ -176,6 +175,7 @@ class linkedList{
             current = current.next;
             if(current.data == data){
                 previous.next = current.next;
+                current = previous;             //update current to previous value
             }
         }
     }
@@ -207,11 +207,11 @@ ll.insertAtFirst(200);
 ll.insertAtFirst(300);
 ll.insertAtLast(400);
 ll.insertAtFirst(900);
-ll.insertAt(500,0);
-ll.insertBefore(700,4);
+ll.insertBefore(500,4);
 ll.insertAfter(800,5);
-
-ll.removeByData(700);
+ll.insertAt(500,0);
+ll.insertAt(500,5);
+ll.removeByData(500);
 ll.printListData();
 
 console.log("size of linked list = "+ll.sizeFind());
