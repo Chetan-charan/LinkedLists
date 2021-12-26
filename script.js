@@ -143,8 +143,9 @@ class linkedList{
             current = current.next;
             ++count;
         }
-        previous.next = node;
         node.next = current;
+        previous.next = node;
+     
         
 
     }
@@ -159,8 +160,9 @@ class linkedList{
            current = current.next;
             ++count;
         }
-        previous.next = node;
         node.next = current;
+        previous.next = node;
+        
     }
 
     removeByData(data){
